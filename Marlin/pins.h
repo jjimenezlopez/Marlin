@@ -21,6 +21,9 @@
 
 #define DIGIPOTSS_PIN -1
 
+// MODIFICATION: this modification makes the pin 57 works as KILL button (panic button).
+#define KILL_PIN2 57
+
 #define X_MIN_PIN -1
 #define X_MAX_PIN -1
 #define Y_MIN_PIN -1
