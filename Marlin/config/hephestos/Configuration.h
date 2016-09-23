@@ -390,7 +390,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 //    Probe 3 arbitrary points on the bed (that aren't colinear)
 //    You must specify the X & Y coordinates of all 3 points
 
-#define AUTO_BED_LEVELING_GRID
+// #define AUTO_BED_LEVELING_GRID
   // with AUTO_BED_LEVELING_GRID, the bed is sampled in a
   // AUTO_BED_LEVELING_GRID_POINTSxAUTO_BED_LEVELING_GRID_POINTS grid
   // and least squares solution is calculated
@@ -414,12 +414,12 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
       #define ABL_MANUAL_PT_1_X X_MIN_POS + 30 + X_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_1_Y Y_MIN_POS + 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
-      #define ABL_MANUAL_PT_2_X X_MAX_POS - 30 + X_PROBE_OFFSET_FROM_EXTRUDER
+      #define ABL_MANUAL_PT_2_X X_MAX_POS - 30 //+ X_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_2_Y Y_MIN_POS + 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
-      #define ABL_MANUAL_PT_3_X X_MAX_POS - 30 + X_PROBE_OFFSET_FROM_EXTRUDER
-      #define ABL_MANUAL_PT_3_Y Y_MAX_POS - 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
+      #define ABL_MANUAL_PT_3_X X_MAX_POS - 30 //+ X_PROBE_OFFSET_FROM_EXTRUDER
+      #define ABL_MANUAL_PT_3_Y Y_MAX_POS - 30 //+ Y_PROBE_OFFSET_FROM_EXTRUDER
       #define ABL_MANUAL_PT_4_X X_MIN_POS + 30 + X_PROBE_OFFSET_FROM_EXTRUDER
-      #define ABL_MANUAL_PT_4_Y Y_MAX_POS - 30 + Y_PROBE_OFFSET_FROM_EXTRUDER
+      #define ABL_MANUAL_PT_4_Y Y_MAX_POS - 30 //+ Y_PROBE_OFFSET_FROM_EXTRUDER
 
       #define ABL_PROBE_PT_1_X ABL_MANUAL_PT_1_X
       #define ABL_PROBE_PT_1_Y ABL_MANUAL_PT_1_Y
@@ -437,9 +437,9 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 
 
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
-  #define X_PROBE_OFFSET_FROM_EXTRUDER 23
-  #define Y_PROBE_OFFSET_FROM_EXTRUDER 27
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER 0
+  #define X_PROBE_OFFSET_FROM_EXTRUDER 25
+  #define Y_PROBE_OFFSET_FROM_EXTRUDER 29
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER 1.4
 
   //If defined, the Probe servo will be turned on only during movement and then turned off to avoid jerk
   //The value is the delay to turn the servo off after powered on - depends on the servo speed; 300ms is good value, but you can try lower it.
