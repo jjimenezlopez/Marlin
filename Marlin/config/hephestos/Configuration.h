@@ -13,7 +13,7 @@
 #define MACHINE_NAME "Hephestos"
 #define FIRMWARE_URL "http://www.bq.com/gb/support/prusa"
 #define SOURCE_CODE_URL "http://github.com/bq/Marlin"
-#define FIRMWARE_VER "2.3.1"
+#define FIRMWARE_VER "2.3.1-Gallifrey"
 #define BUILD_VER ""
 
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
@@ -439,7 +439,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
   // these are the offsets to the probe relative to the extruder tip (Hotend - Probe)
   #define X_PROBE_OFFSET_FROM_EXTRUDER 25
   #define Y_PROBE_OFFSET_FROM_EXTRUDER 29
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER 1.4
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER 1.05
 
   //If defined, the Probe servo will be turned on only during movement and then turned off to avoid jerk
   //The value is the delay to turn the servo off after powered on - depends on the servo speed; 300ms is good value, but you can try lower it.
@@ -469,7 +469,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
  */
 
 #define HOMING_FEEDRATE {2000, 2000, 150, 0} // set the homing speeds (mm/min)
-#define HOMING_SLOW_FEEDRATE {2000, 2000, 150, 0}
+#define HOMING_SLOW_FEEDRATE {2000, 2000, 75, 0}
 #define NUM_AXIS 4 // The axis order in all axis related arrays is X, Y, Z, E
 
 // default settings
